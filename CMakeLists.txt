@@ -3,6 +3,8 @@ project(demo)
 
 set(CMAKE_CXX_STANDARD 11)
 
+file(COPY haarcascade_frontalface_default.xml DESTINATION ${PROJECT_SOURCE_DIR}/cmake-build-release)
+
 set(SOURCE_FILES
         main.cpp
         VideoFaceDetector.cpp
