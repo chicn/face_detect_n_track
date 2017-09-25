@@ -9,4 +9,10 @@ set(SOURCE_FILES
         VideoFaceDetector.cpp
         VideoFaceDetector.h)
 
+# OpenCV
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+
 add_executable(demo ${SOURCE_FILES})
+
+target_link_libraries(demo ${OpenCV_LIBS})
